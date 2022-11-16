@@ -37,10 +37,6 @@ img {
   display: block;
 }
 
-.mask {
-  overflow: hidden;
-}
-
 [class$="__heading"] {
   text-align: center;
   margin-bottom: 5rem;
@@ -206,19 +202,31 @@ img {
 
 .security {
   background-color: var(--primario);
-  padding: 10rem 0;
-  transform: rotate(3deg) scale(1.5);
-  margin: 50rem 0;
+  padding: 20rem 0;
+  position: relative;
+  margin: 10rem 0;
+  overflow: hidden;
 }
 
-@media (min-width: 768px) {
-  .security {
-    margin: 30rem 0;
-  }
+.security::before,
+.security::after {
+  background-color: var(--blanco);
+  content: '';
+  height: 20rem;
+  width: 130%;
+  position: absolute;
 }
 
-.security__container {
-  transform: rotate(-3deg) scale(.75);
+.security::before {
+  top: -10rem;
+  left: 0;
+  transform: rotate(3deg);
+}
+
+.security::after {
+  bottom: -10rem;
+  left: 0;
+  transform: rotate(-3deg);
 }
 
 .security__heading {
