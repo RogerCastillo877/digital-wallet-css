@@ -189,10 +189,35 @@ img {
   transform: scale(1.1);
 }
 
+@media (min-width: 768px) {
+  .list__element--2col {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
 .list__heading {
   font-size: 3rem;
   color: var(--primario);
   margin: 0;
+}
+
+.list__number {
+  font-size: 6rem;
+  margin: 0;
+  font-weight: 900;
+  color: var(--primario);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .list__number {
+    font-size: 4rem;
+    flex-basis: 20rem;
+    text-align: right;
+  }
 }
 
 .list__text {
@@ -247,6 +272,24 @@ img {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 5rem;
+    align-items: flex-end;
+  }
+}
+
+@media (min-width: 998px) {
+  .feese__grid {
     align-items: center;
+  }
+}
+
+.feese__text {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .feese__text {
+    text-align: left;
   }
 }
